@@ -30,21 +30,22 @@ function App() {
   }
 
   return (
-    <div className="bg-[#D8F6FF] h-screen flex flex-1 flex-col justify-center items-center">
+    <div className="h-screen flex flex-1 flex-col justify-center items-center">
       <img src={logo} />
       
       <form 
-        className='bg-[#ffffff] flex flex-col mt-3 p-5 rounded-lg'
+        className='bg-[#ffffff] flex w-[21rem] flex-col mt-3 p-5 rounded-lg shadow-[1px_1px_1px_1px_rgba(0,0,0,0.3)]'
         onSubmit={handleSubmit}
       >
-        <span className='text-center'>
+        <span className='text-center text-[#05799E] text-[12px]'>
           Manipule os dados dos seus pets, e consiga uma<br /> 
           organização de todos os bichinhos do seu <br />
           <strong>petshop</strong>.
         </span>
 
         <input 
-          className='bg-gray-200 focus:outline-none rounded-lg p-2'
+          className='bg-[#f2f2f2] focus:outline-none rounded-lg p-2 mt-3'
+          placeholder='Name'
           value={password}
           onChange={(e) => setPassword(e.target.value)} 
           type="text" 
@@ -52,10 +53,10 @@ function App() {
         />
       
         <button 
-          className=' bg-blue-400 focus:outline-none rounded-lg mt-3 p-2'
-          type="submit"
+          className=' bg-[#BCBCBC] focus:outline-none rounded-lg mt-3 mb-3 p-2'
+          disabled
         >
-          <strong className='text-white'>Login</strong>
+          <strong className='text-[#242424]'>Login</strong>
         </button>
       </form>
     </div>

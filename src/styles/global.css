@@ -5,3 +5,7 @@
 span, strong, input, title {
   font-family: 'Poppins', sans-serif;
 }
+
+body {
+  background-color: #D8F6FF;
+}
