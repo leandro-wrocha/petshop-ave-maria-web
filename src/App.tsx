@@ -1,8 +1,9 @@
 import { Auth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 
-import reactLogo from './assets/react.svg';
 import { auth } from './config/firebase';
+
+import logo from './assets/logo.png';
 
 interface IDataFirebaseLogin {
   auth: Auth,
@@ -29,13 +30,19 @@ function App() {
   }
 
   return (
-    <div className="h-screen flex flex-1 flex-col justify-center items-center">
-      <img src={reactLogo} />
+    <div className="bg-[#D8F6FF] h-screen flex flex-1 flex-col justify-center items-center">
+      <img src={logo} />
       
       <form 
-        className='flex flex-col mt-3'
+        className='bg-[#ffffff] flex flex-col mt-3 p-5 rounded-lg'
         onSubmit={handleSubmit}
       >
+        <span className='text-center'>
+          Manipule os dados dos seus pets, e consiga uma<br /> 
+          organização de todos os bichinhos do seu <br />
+          <strong>petshop</strong>.
+        </span>
+
         <input 
           className='bg-gray-200 focus:outline-none rounded-lg p-2'
           value={password}
